@@ -1,0 +1,44 @@
+.navbar{
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 10px;
+    height: 60px;
+}
+.nav-link{
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    padding: 0 !important;
+    margin: 0 10px;
+}
+.active,.nav-link:hover{
+    color: blue !important;
+    border-bottom: 2px solid blue;
+}
+.navbar-brand{
+    color: brown;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar-brand:hover{
+    color: rgb(244, 121, 14);
+}
+#home{
+    background-color: rgb(243, 248, 246);
+    margin-top: 60px;
+    color: rgb(67, 14, 90);
+    font-family: "Orbitron", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+#home .col-lg-6 img{
+    margin-left: 200px;
+    width: 300px;
+    background-color: rgb(67, 14, 90);
+    border-radius: 50%;
+    padding: 40px;
+}
+#about{
+    background-color: blue;
+}
