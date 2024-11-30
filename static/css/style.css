@@ -1,3 +1,4 @@
+
 .navbar{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px;
@@ -10,8 +11,8 @@
     margin: 0 10px;
 }
 .active,.nav-link:hover{
-    color: blue !important;
-    border-bottom: 2px solid blue;
+    color: rgb(101, 35, 129) !important;
+    border-bottom: 2px solid rgb(101, 35, 129);
 }
 .navbar-brand{
     color: brown;
@@ -24,7 +25,7 @@
 #home{
     background-color: rgb(243, 248, 246);
     margin-top: 60px;
-    color: rgb(67, 14, 90);
+    color: rgb(101, 35, 129);
     font-family: "Orbitron", serif;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -35,10 +36,107 @@
 #home .col-lg-6 img{
     margin-left: 200px;
     width: 300px;
-    background-color: rgb(67, 14, 90);
+    background-color: rgb(101, 35, 129);
     border-radius: 50%;
     padding: 40px;
 }
+#home .col-lg-6 p{
+    color: white;
+    background-color: rgb(101, 35, 129);
+    border-radius: 10px;
+    width: 110px;
+    padding: 10px;
+    margin-top: 50px;
+}
+#home .col-lg-6 a{
+    text-decoration: none;
+    text-align: center;
+}
+#home .col-lg-6 p:hover{
+    box-shadow: 0 0 7px black;
+    font-size: 17px;
+}
+
 #about{
-    background-color: blue;
+    background-color: rgb(63, 16, 83);
+    color: white;
+    font-family: "Nunito", serif;
+    padding: 50px 0 250px;
+}
+h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1,h2,h4{
+    font-weight: 600;
+}
+h1 i{
+    padding-right: 20px;
+}
+#about .container{
+    margin-top: 100px;
+}
+#about .col-lg-6{
+    padding: 0 100px;
+}
+#about .col-lg-6 h2{
+    padding: 30px 0 0 0;
+}
+#about .col-lg-6 img{
+    border-radius: 15px;
+}
+#skills{
+    background-color: rgb(243, 248, 246);
+    color: rgb(101, 35, 129);
+    padding: 50px 0 250px;
+    font-family: "Nunito", serif;
+}
+#skills h1 i{
+    padding-right: 20px;
+}
+#skills .item .bar{
+    width: 100%;
+    background-color: rgb(214, 211, 211);
+    height: 10px;
+}
+#skills .item .bar .bar1{
+    background-color: rgb(101, 35, 129)!important;
+    height: 10px;
+}
+#skills .container{
+    margin-top: 50px;
+}
+#skills .item{
+    margin-top: 30px;
+}
+#education{
+    background-color: rgb(63, 16, 83);
+    color: #ffffff;
+    font-family: "Nunito", serif;
+    padding: 50px 0 150px;
+}
+#education .container{
+    align-items: center;
+    padding-top: 50px;
+}
+#education .card{
+    flex-direction: row;
+    margin: 0 150px 50px ;
+}
+#education .card img{
+    width: 30%;
+}
+#contact{
+    color: rgb(63, 16, 83);
+    background-color: rgb(243, 248, 246);
+    font-family: "Nunito", serif;
+    padding: 50px 0 150px;
+}
+#contact .container{
+    width: 60%;
+    background-color: rgb(219, 231, 226);
+    border-radius: 15px;
+}
+#contact .col-lg-6{
+    padding: 30px;
 }
