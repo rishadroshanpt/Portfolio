@@ -26,7 +26,7 @@
     background-color: rgb(243, 248, 246);
     margin-top: 60px;
     color: rgb(101, 35, 129);
-    font-family: "Orbitron", serif;
+    font-family: "Orbitron", serif !important;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -139,4 +139,13 @@ h1 i{
 }
 #contact .col-lg-6{
     padding: 30px;
+}
+#contact form{
+    margin: 100px 0;
+}
+.social{
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: rotate(-90deg);
 }
