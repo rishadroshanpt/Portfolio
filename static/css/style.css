@@ -33,6 +33,10 @@
     padding-top: 200px;
     padding-bottom: 200px;
 }
+#home h1{
+    font-family: "Orbitron", serif !important;
+    text-align: left;
+}
 #home .col-lg-6 img{
     margin-left: 200px;
     width: 300px;
@@ -61,7 +65,7 @@
     background-color: rgb(63, 16, 83);
     color: white;
     font-family: "Nunito", serif;
-    padding: 50px 0 250px;
+    padding: 70px 0 250px;
 }
 h1{
     text-align: center;
@@ -88,7 +92,7 @@ h1 i{
 #skills{
     background-color: rgb(243, 248, 246);
     color: rgb(101, 35, 129);
-    padding: 50px 0 250px;
+    padding: 70px 0 250px;
     font-family: "Nunito", serif;
 }
 #skills h1 i{
@@ -113,7 +117,7 @@ h1 i{
     background-color: rgb(63, 16, 83);
     color: #ffffff;
     font-family: "Nunito", serif;
-    padding: 50px 0 150px;
+    padding: 70px 0 150px;
 }
 #education .container{
     align-items: center;
@@ -130,7 +134,7 @@ h1 i{
     color: rgb(63, 16, 83);
     background-color: rgb(243, 248, 246);
     font-family: "Nunito", serif;
-    padding: 50px 0 150px;
+    padding: 70px 0 150px;
 }
 #contact .container{
     width: 60%;
@@ -143,9 +147,31 @@ h1 i{
 #contact form{
     margin: 100px 0;
 }
+#contact input{
+    width: 200px;
+}
+#contact #msg{
+    height: 50px;
+}
+#contact input[type=submit]{
+    background-color: rgb(5, 102, 154);
+    border-radius: 5px;
+    border: 0;
+    color: white;
+}
 .social{
     position: fixed;
     top: 50%;
-    left: 20px;
+    /* left: 1%; */
     transform: rotate(-90deg);
+}
+.social i{
+    padding:0 10px;
+    font-size: 20px;
+}
+.social a{
+    color: rgb(202, 157, 33);
+}
+.social a:hover{
+    color: rgb(202, 101, 33);
 }
