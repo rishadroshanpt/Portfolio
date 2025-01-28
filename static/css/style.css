@@ -140,6 +140,10 @@ h1 i{
     padding: 70px 0 250px;
     font-family: "Nunito", serif;
 }
+#resume .res{
+    width: 1200px;
+    margin: auto;
+}
 #pro{
     background-color: rgba(63, 16, 83, 0.232);
     color: #ffffff;
