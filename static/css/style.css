@@ -144,14 +144,19 @@ h1 i{
     width: 1200px;
     margin: auto;
 }
+#resume .res iframe{
+    width: 100%;
+    height: 600px;
+}
 #pro{
     background-color: rgba(63, 16, 83, 0.232);
     color: #ffffff;
     font-family: "Nunito", serif;
-    padding: 70px 0 150px;
+    padding: 70px 0 70px;
 }
 #pro .card{
     border-radius: 15px;
+    width: 400px;
 }
 #pro .card img{
     border-radius: 15px;
@@ -209,4 +214,161 @@ h1 i{
 }
 .social a:hover{
     color: rgb(202, 101, 33);
+}
+
+@media only screen and (max-width: 578px) {
+    .navbar .container{
+        background-color: rgb(255, 255, 255);
+        /* box-shadow: 0 0 10px; */
+        /* height: 60px; */
+    }
+    .navbar-toggler{
+        color: black;
+    }
+    #home{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    #home .col-lg-6 img{
+        margin-left: 120px;
+        width: 250px;
+    }
+    
+    #about{
+        padding: 70px 0 70px;
+    }
+    #about .container{
+        margin-top: 50px;
+    }
+    #about .col-lg-6{
+        padding: 0 ;
+ 
+    }
+    #about .col-lg-6 img{
+        width: 300px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    #skills{
+        background-color: rgb(243, 248, 246);
+        color: rgb(101, 35, 129);
+        padding: 70px 0 70px;
+        font-family: "Nunito", serif;
+    }
+    #skills h1 i{
+        padding-right: 20px;
+    }
+    #skills .item .bar{
+        width: 100%;
+        background-color: rgb(214, 211, 211);
+        height: 10px;
+    }
+    #skills .item .bar .bar1{
+        background-color: rgb(101, 35, 129)!important;
+        height: 10px;
+    }
+    #skills .container{
+        margin-top: 50px;
+    }
+    #skills .item{
+        margin-top: 30px;
+    }
+    #education{
+        background-color: rgba(63, 16, 83, 0.232);
+        color: #ffffff;
+        font-family: "Nunito", serif;
+        padding: 70px 0 70px;
+    }
+    #education .container{
+        align-items: center;
+        padding-top: 50px;
+    }
+    #education .card{
+        flex-direction: row;
+        margin: 0 150px 50px ;
+    }
+    #education .card img{
+        width: 30%;
+    }
+    #resume{
+        background-color: rgb(243, 248, 246);
+        color: rgb(101, 35, 129);
+        padding: 70px 0 70px;
+        font-family: "Nunito", serif;
+    }
+    #resume .res{
+        width: 350px;
+        margin: auto;
+    }
+    #resume .res iframe{
+        width: 100%;
+        height: 400px;
+    }
+    #pro{
+        background-color: rgba(63, 16, 83, 0.232);
+        color: #ffffff;
+        font-family: "Nunito", serif;
+        padding: 70px 0 150px;
+    }
+    #pro .card{
+        border-radius: 15px;
+        width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    #pro .card img{
+        border-radius: 15px;
+    }
+    #pro .card-body{
+        text-align: center;
+    }
+    #pro .card-body .card-des{
+        color: grey;
+    }
+    /* #pro .card-body .des{
+        display: none;
+    } */
+    #contact{
+        color: rgb(63, 16, 83);
+        background-color: rgb(243, 248, 246);
+        font-family: "Nunito", serif;
+        padding: 70px 0 150px;
+    }
+    #contact .container{
+        width: 100%;
+        background-color: rgb(219, 231, 226);
+        border-radius: 15px;
+    }
+    #contact img{
+        width: 350px;
+    }
+    #contact .col-lg-6{
+        padding: 0px;
+    }
+    #contact form{
+        margin: 100px 0;
+    }
+    #contact input{
+        width: 200px;
+    }
+    #contact #msg{
+        height: 50px;
+    }
+    #contact input[type=submit]{
+        background-color: rgb(5, 102, 154);
+        border-radius: 5px;
+        border: 0;
+        color: white;
+    }
+    .social{
+        position: fixed;
+        top: 50%;
+        left: -5%;
+        transform: rotate(-90deg);
+    }
+    .social i{
+        padding:0 5px;
+        font-size: 15px;
+    }
 }
