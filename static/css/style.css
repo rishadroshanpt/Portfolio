@@ -184,33 +184,21 @@ h1 i{
 #contact .col-lg-6{
     padding: 30px;
 }
-#contact form{
-    margin: 100px 0;
-}
-#contact input{
-    width: 200px;
-}
-#contact #msg{
-    height: 50px;
-}
-#contact input[type=submit]{
-    background-color: rgb(5, 102, 154);
-    border-radius: 5px;
-    border: 0;
-    color: white;
-}
+
 .social{
-    position: fixed;
-    top: 50%;
-    /* left: 1%; */
-    transform: rotate(-90deg);
+    width: 300px;
+    position: relative;
+    top: 25%;
+    text-align: center;
+    margin: auto;
 }
+
 .social i{
-    padding:0 10px;
-    font-size: 20px;
+    padding:10px;
+    font-size: 50px;
 }
 .social a{
-    color: rgb(202, 157, 33);
+    color: white;
 }
 .social a:hover{
     color: rgb(202, 101, 33);
@@ -285,8 +273,8 @@ h1 i{
         padding-top: 50px;
     }
     #education .card{
-        flex-direction: row;
-        margin: 0 150px 50px ;
+        /* width: 300px; */
+        margin: auto
     }
     #education .card img{
         width: 30%;
@@ -317,28 +305,15 @@ h1 i{
         margin: auto;
         margin-bottom: 20px;
     }
-    #pro .card img{
-        border-radius: 15px;
-    }
-    #pro .card-body{
-        text-align: center;
-    }
-    #pro .card-body .card-des{
-        color: grey;
-    }
     /* #pro .card-body .des{
         display: none;
     } */
     #contact{
-        color: rgb(63, 16, 83);
-        background-color: rgb(243, 248, 246);
-        font-family: "Nunito", serif;
-        padding: 70px 0 150px;
+        padding: 70px 0 50px;
     }
     #contact .container{
         width: 100%;
-        background-color: rgb(219, 231, 226);
-        border-radius: 15px;
+        height: 600px;
     }
     #contact img{
         width: 350px;
@@ -346,29 +321,11 @@ h1 i{
     #contact .col-lg-6{
         padding: 0px;
     }
-    #contact form{
-        margin: 100px 0;
-    }
-    #contact input{
-        width: 200px;
-    }
-    #contact #msg{
-        height: 50px;
-    }
-    #contact input[type=submit]{
-        background-color: rgb(5, 102, 154);
-        border-radius: 5px;
-        border: 0;
-        color: white;
-    }
     .social{
-        position: fixed;
-        top: 50%;
-        left: -5%;
-        transform: rotate(-90deg);
+        top: 25%;
     }
     .social i{
         padding:0 5px;
-        font-size: 15px;
+        font-size: 45px;
     }
 }
