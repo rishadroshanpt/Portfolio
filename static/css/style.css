@@ -11,12 +11,12 @@
     margin: 0 10px;
 }
 .active,.nav-link:hover{
-    color: rgb(101, 35, 129) !important;
-    border-bottom: 2px solid rgb(101, 35, 129);
+    color: orange !important;
+    border-bottom: 2px solid orange;
 }
 .navbar-nav .nav-link.active {
-    color: rgb(101, 35, 129) !important;
-    border-bottom: 2px solid rgb(101, 35, 129);
+    color:orange !important;
+    border-bottom: 2px solid orange;
   }
 .navbar-brand{
     color: brown;
@@ -27,9 +27,9 @@
     color: rgb(244, 121, 14);
 }
 #home{
-    background-color: rgb(243, 248, 246);
+    background-color: rgb(197, 197, 197);
     margin-top: 60px;
-    color: rgb(101, 35, 129);
+    color: orange;
     font-family: "Orbitron", serif !important;
     font-optical-sizing: auto;
     font-weight: 500;
@@ -44,13 +44,13 @@
 #home .col-lg-6 img{
     margin-left: 200px;
     width: 300px;
-    background-color: rgb(101, 35, 129);
+    background-color: orange;
     border-radius: 50%;
     padding: 40px;
 }
 #home .col-lg-6 p{
     color: white;
-    background-color: rgb(101, 35, 129);
+    background-color: orange;
     border-radius: 10px;
     width: 110px;
     padding: 10px;
@@ -66,7 +66,7 @@
 }
 
 #about{
-    background-color: rgba(63, 16, 83, 0.232);
+    background-color: black;
     color: white;
     font-family: "Nunito", serif;
     padding: 70px 0 250px;
@@ -92,10 +92,13 @@ h1 i{
 }
 #about .col-lg-6 img{
     border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
 }
 #skills{
-    background-color: rgb(243, 248, 246);
-    color: rgb(101, 35, 129);
+    background-color: rgb(197, 197, 197);
+    color: orange;
     padding: 70px 0 250px;
     font-family: "Nunito", serif;
 }
@@ -108,7 +111,7 @@ h1 i{
     height: 10px;
 }
 #skills .item .bar .bar1{
-    background-color: rgb(101, 35, 129)!important;
+    background-color: orange!important;
     height: 10px;
 }
 #skills .container{
@@ -118,7 +121,7 @@ h1 i{
     margin-top: 30px;
 }
 #education{
-    background-color: rgba(63, 16, 83, 0.232);
+    background-color: black;
     color: #ffffff;
     font-family: "Nunito", serif;
     padding: 70px 0 150px;
@@ -135,8 +138,8 @@ h1 i{
     width: 30%;
 }
 #resume{
-    background-color: rgb(243, 248, 246);
-    color: rgb(101, 35, 129);
+    background-color: rgb(197, 197, 197);
+    color: orange;
     padding: 70px 0 250px;
     font-family: "Nunito", serif;
 }
@@ -149,7 +152,7 @@ h1 i{
     height: 600px;
 }
 #pro{
-    background-color: rgba(63, 16, 83, 0.232);
+    background-color: black;
     color: #ffffff;
     font-family: "Nunito", serif;
     padding: 70px 0 70px;
@@ -170,9 +173,18 @@ h1 i{
 /* #pro .card-body .des{
     display: none;
 } */
+ #pro .btn{
+    border-color: orange;
+    color: orange;
+    font-weight: 700;
+ }
+ #pro .btn:hover{
+    background-color: orange;
+    color: white;
+ }
 #contact{
-    color: rgb(63, 16, 83);
-    background-color: rgb(243, 248, 246);
+    color: orange;
+    background-color: rgb(197, 197, 197);
     font-family: "Nunito", serif;
     padding: 70px 0 150px;
 }
@@ -210,8 +222,8 @@ h1 i{
         /* box-shadow: 0 0 10px; */
         /* height: 60px; */
     }
-    .navbar-toggler{
-        color: black;
+    .navbar-toggler-icon{
+        color: blue !important;
     }
     #home{
         padding-top: 100px;
@@ -223,7 +235,7 @@ h1 i{
     }
     
     #about{
-        padding: 70px 0 70px;
+        padding: 70px  20px;
     }
     #about .container{
         margin-top: 50px;

@@ -65,6 +65,10 @@ document.querySelector('.pro-card2').addEventListener('click', function(event) {
     const des = this.querySelector('.pro-des2');
     des.style.display = (des.style.display === 'none' || des.style.display === '') ? 'block' : 'none';
 });
+document.querySelector('.pro-card3').addEventListener('click', function(event) {
+  const des = this.querySelector('.pro-des3');
+  des.style.display = (des.style.display === 'none' || des.style.display === '') ? 'block' : 'none';
+});
 
 // document.querySelector('.pro-card').addEventListener('click', function(event) {
 //     // Get the .des section inside the clicked card
