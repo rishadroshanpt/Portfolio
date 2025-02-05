@@ -1,4 +1,6 @@
-
+body{
+    background-color: rgba(0, 0, 0, 0.226);
+}
 .navbar{
     background-color: rgb(255, 255, 255);
     box-shadow: 0 0 10px;
@@ -9,15 +11,26 @@
     color: rgb(0, 0, 0);
     padding: 0 !important;
     margin: 0 10px;
+    position: relative;
 }
 .active,.nav-link:hover{
     color: orange !important;
-    border-bottom: 2px solid orange;
 }
-.navbar-nav .nav-link.active {
-    color:orange !important;
-    border-bottom: 2px solid orange;
-  }
+
+  .nav-link::after{
+    content: '';
+    width:0;
+    height: 3px;
+    background: orange;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.5s;
+   
+}
+.nav-link:hover::after{
+    width: 100%;
+}
 .navbar-brand{
     color: brown;
     font-weight: 700;
@@ -27,7 +40,7 @@
     color: rgb(244, 121, 14);
 }
 #home{
-    background-color: rgb(197, 197, 197);
+    background: linear-gradient(black, rgba(0, 0, 0, 0.026));
     margin-top: 60px;
     color: orange;
     font-family: "Orbitron", serif !important;
@@ -66,7 +79,7 @@
 }
 
 #about{
-    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.026), #000000);
     color: white;
     font-family: "Nunito", serif;
     padding: 70px 0 250px;
@@ -97,7 +110,7 @@ h1 i{
     object-fit: cover;
 }
 #skills{
-    background-color: rgb(197, 197, 197);
+    background: linear-gradient(black, rgba(0, 0, 0, 0.026));
     color: orange;
     padding: 70px 0 250px;
     font-family: "Nunito", serif;
@@ -121,7 +134,7 @@ h1 i{
     margin-top: 30px;
 }
 #education{
-    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.026), #000000);
     color: #ffffff;
     font-family: "Nunito", serif;
     padding: 70px 0 150px;
@@ -138,10 +151,12 @@ h1 i{
     width: 30%;
 }
 #resume{
-    background-color: rgb(197, 197, 197);
+    background: linear-gradient(black, rgba(0, 0, 0, 0.026));
     color: orange;
     padding: 70px 0 250px;
     font-family: "Nunito", serif;
+    text-align: center;
+
 }
 #resume .res{
     width: 1200px;
@@ -152,39 +167,93 @@ h1 i{
     height: 600px;
 }
 #pro{
-    background-color: black;
+    /* background-color: black; */
+    background: linear-gradient(rgba(0, 0, 0, 0.026), #000000);
+
     color: #ffffff;
     font-family: "Nunito", serif;
     padding: 70px 0 70px;
 }
-#pro .card{
-    border-radius: 15px;
-    width: 400px;
+.project-content {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, auto));
+    align-items: center;
+    gap: 2.5rem;
+    margin-top: 5rem;
 }
-#pro .card img{
-    border-radius: 15px;
+
+.row {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
 }
-#pro .card-body{
-    text-align: center;
+
+.row .img {
+    width: 700px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    transition: transform 0.5s;
 }
-#pro .card-body .card-des{
-    color: grey;
+
+.layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.226), #000000);
+    position: absolute;
+    border-radius: 8px;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 40px;
+    transition: height 0.5s;
 }
-/* #pro .card-body .des{
-    display: none;
-} */
+
+.layer h5 {
+    font: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.layer p {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.8;
+
+}
+.row:hover .img {
+    transform: scale(1.1);
+
+}
+
+.row:hover .layer {
+    height: 100%;
+}
  #pro .btn{
+    display: inline;
     border-color: orange;
     color: orange;
     font-weight: 700;
  }
- #pro .btn:hover{
+ #pro .btn:hover,.btn1:hover{
     background-color: orange;
     color: white;
  }
+ .btn1{
+    border-color: orange;
+    color: orange;
+    font-weight: 700;
+ }
 #contact{
     color: orange;
-    background-color: rgb(197, 197, 197);
+    background: linear-gradient(black, rgba(0, 0, 0, 0.026));
     font-family: "Nunito", serif;
     padding: 70px 0 150px;
 }
@@ -203,11 +272,12 @@ h1 i{
     top: 25%;
     text-align: center;
     margin: auto;
+    display: inline;
 }
 
 .social i{
     padding:10px;
-    font-size: 50px;
+    font-size: 25px;
 }
 .social a{
     color: white;
@@ -216,6 +286,60 @@ h1 i{
     color: rgb(202, 101, 33);
 }
 
+.contact-form form input,
+form textarea {
+    width: 100%;
+    padding: 14px;
+    background: white;
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 240px;
+}
+
+.contact-form .submit {
+    display: inline-block;
+    font-size: 16px;
+    background: white;
+    color: var(--text-color);
+    width: 160px;
+    transition: all .45s ease;
+}
+
+.contact-form .submit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.content {
+    opacity: 0;
+    transform: translateY(100px); /* This will make the element start from a lower position */
+    transition: all 0.6s ease-out;
+}
+
+/* Animating to visible state */
+.content.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves back to normal position */
+}
+
+/* For a smoother effect when images come into view */
+img {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+img.visible {
+    opacity: 1;
+    transform: scale(1);
+}
 @media only screen and (max-width: 578px) {
     .navbar .container{
         background-color: rgb(255, 255, 255);
@@ -251,8 +375,6 @@ h1 i{
         margin-left: auto;
     }
     #skills{
-        background-color: rgb(243, 248, 246);
-        color: rgb(101, 35, 129);
         padding: 70px 0 70px;
         font-family: "Nunito", serif;
     }
@@ -261,11 +383,9 @@ h1 i{
     }
     #skills .item .bar{
         width: 100%;
-        background-color: rgb(214, 211, 211);
         height: 10px;
     }
     #skills .item .bar .bar1{
-        background-color: rgb(101, 35, 129)!important;
         height: 10px;
     }
     #skills .container{
@@ -275,8 +395,6 @@ h1 i{
         margin-top: 30px;
     }
     #education{
-        background-color: rgba(63, 16, 83, 0.232);
-        color: #ffffff;
         font-family: "Nunito", serif;
         padding: 70px 0 70px;
     }
@@ -292,8 +410,6 @@ h1 i{
         width: 30%;
     }
     #resume{
-        background-color: rgb(243, 248, 246);
-        color: rgb(101, 35, 129);
         padding: 70px 0 70px;
         font-family: "Nunito", serif;
     }
@@ -306,8 +422,6 @@ h1 i{
         height: 400px;
     }
     #pro{
-        background-color: rgba(63, 16, 83, 0.232);
-        color: #ffffff;
         font-family: "Nunito", serif;
         padding: 70px 0 150px;
     }
@@ -338,6 +452,20 @@ h1 i{
     }
     .social i{
         padding:0 5px;
-        font-size: 45px;
+        font-size: 20px;
+    }
+    .contact-form{
+        width: 80%;
+        margin: auto;
+    }
+    .contact-form form input,
+    form textarea {
+        padding: 5px;
+        margin-bottom: 10px;
+        font-size: 12px;
+    }
+
+    .contact-form textarea {
+        height: 80px;
     }
 }

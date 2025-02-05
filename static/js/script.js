@@ -56,28 +56,21 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  document.querySelector('.pro-card').addEventListener('click', function(event) {
-    const des = this.querySelector('.pro-des');
-    des.style.display = (des.style.display === 'none' || des.style.display === '') ? 'block' : 'none';
+
+
+// Function to check if an element is in the viewport
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+      if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Stop observing once the element is visible
+      }
+  });
+}, {
+  threshold: 0.1  // Trigger when 10% of the element is visible
 });
 
-document.querySelector('.pro-card2').addEventListener('click', function(event) {
-    const des = this.querySelector('.pro-des2');
-    des.style.display = (des.style.display === 'none' || des.style.display === '') ? 'block' : 'none';
+// Targeting all elements with the 'content' or 'img' class
+document.querySelectorAll('.content, img').forEach(element => {
+  observer.observe(element);
 });
-document.querySelector('.pro-card3').addEventListener('click', function(event) {
-  const des = this.querySelector('.pro-des3');
-  des.style.display = (des.style.display === 'none' || des.style.display === '') ? 'block' : 'none';
-});
-
-// document.querySelector('.pro-card').addEventListener('click', function(event) {
-//     // Get the .des section inside the clicked card
-//     const des = this.querySelector('.pro-des');
-    
-//     // Toggle the display style of .des between 'none' and 'block'
-//     if (des.style.display === 'none' || des.style.display === '') {
-//         des.style.display = 'block'; // Make the .des section visible
-//     } else {
-//         des.style.display = 'none'; // Hide the .des section
-//     }
-// });
