@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Playwrite+HU:wght@100..400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -15,143 +15,208 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <title>Rishad Roshan — Portfolio</title>
 </head>
 
 <body>
+    <!-- 3D Background Container -->
+    <div id="canvas-container"></div>
+
     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="javascript:void(0)">ROSHAN</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
-                <span class="navbar-toggler-icon"><i class="fas fa-bars" style="color:orange; font-size:28px;"></i></span>
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="mynavbar">
                 <ul class="navbar-nav">
+                    <li class="nav-item"><a class="active nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pro">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
-                        <a class="active nav-link" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#resume">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#pro">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                            <i class="fa-solid fa-sun"></i>
+                        </button>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+
     <div class="main">
         <section id="home">
             <div class="content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <h3>Hello There,</h3>
-                            <h1>I'm RISHAD ROSHAN</h1>
-                            <h2>I'm into Web Development</h2>
-                            <a href="#about">
-                                <p>About me</p>
-                            </a>
+                <div class="container hero-lg">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 hero-left offset-lg-1">
+                            <p class="eyebrow"><span id="typewriter"></span><span class="cursor">_</span></p>
+                            <h1 class="fade-in">Building Robust <br><span class="text-gradient">Solutions</span></h1>
+                            <p class="hero-sub fade-in">I architect scalable web applications and solve complex problems
+                                with clean, efficient code. Dedicated to high-performance engineering.</p>
+                            <div class="hero-cta mt-4 fade-in">
+                                <a class="btn btn-primary me-2" href="#pro">View Projects</a>
+                                <a class="btn btn-outline" href="#contact">Contact Me</a>
+                            </div>
+                            <div class="hero-stats d-flex gap-4 mt-5 fade-in">
+                                <div class="stat text-start">
+                                    <div class="stat-num"><span class="counter" data-target="20">0</span>+</div>
+                                    <div class="stat-label">Projects</div>
+                                </div>
+                                <!-- <div class="stat text-start">
+                                    <div class="stat-num"><span class="counter" data-target="15">0</span>+</div>
+                                    <div class="stat-label">Happy Clients</div>
+                                </div> -->
+                            </div>
                         </div>
-                        <div class="col-lg-6">
-                            <img src="../static/images/hi.png" alt="">
+                        <div class="col-lg-6 hero-right text-center fade-in delay-200">
+                            <div class="hero-visual">
+                                <img src="../static/images/roshan.PNG" alt="profile">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- <section id="services">
+            <div class="content">
+                <div class="container">
+                    <div class="services-grid">
+                        <div class="service-card" data-tilt>
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <h5>Website Design</h5>
+                            <p>Responsive, accessible websites with clean UI and modern aesthetics.</p>
+                        </div>
+                        <div class="service-card" data-tilt>
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                            <h5>Mobile App Design</h5>
+                            <p>Intuitive UIs and fast interactions designed for smaller screens.</p>
+                        </div>
+                        <div class="service-card" data-tilt>
+                            <i class="fa-solid fa-layer-group"></i>
+                            <h5>Brand Identity</h5>
+                            <p>Thoughtful visual systems and logos that define your digital presence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+
+
+
+
+
         <section id="about">
             <div class="content">
-                <h1><i class="fa-solid fa-user"></i>About Me</h1>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <img src="../static/images/IMG_3335.jpg" alt="">
-                        </div>
-                        <div class="col-lg-6">
+                    <div class="section-title">
+                        <h1>About Me</h1>
+                    </div>
+                    <div class="row align-items-center justify-content-center">
+                        <div class="col-lg-10 text-center">
                             <h2>I'm ROSHAN</h2>
-                            <h4>Full Stack Developer</h4>
-                            <p>I am a Full-Stack developer based in Kerala, India. I am an Computer Engineering Diploma
-                                graduate from AKNM GPTC Thirurangadi. I build Websites using Python. </p>
-                            <p>Place : Malappuram , Kerala , India - 676122 </p>
-    
+                            <h4 class="text-accent mb-4">Software Engineer</h4>
+                            <div class="text-start"
+                                style="max-width: 800px; margin: 0 auto; color: var(--text-secondary);">
+                                <p>I’m a full-stack Python engineer focused on building production-ready software, not
+                                    demos or tutorial clones.</p>
+
+                                <p>My core stack is Python, Django, REST APIs, React, and PostgreSQL, with hands-on
+                                    experience deploying and operating systems on AWS (EC2, S3, RDS). I work end-to-end:
+                                    backend logic, APIs, authentication, database design, performance optimization, and
+                                    deployment.</p>
+
+                                <p>During my internship, I worked on live Django applications, where I improved
+                                    performance by optimizing database queries, fixing structural bottlenecks, and
+                                    cleaning up brittle logic. I’ve deployed and managed cloud infrastructure myself—not
+                                    to pad a resume, but to understand how real systems behave outside localhost.</p>
+
+                                <p>I’m deliberate about fundamentals: clean architecture, readable code, predictable
+                                    APIs, and systems that scale without becoming fragile. I don’t hide behind “still
+                                    learning”—I build, ship, break things, debug them, and improve the design.</p>
+
+                                <p>Right now, I’m looking for a role as a full-stack Python engineer where I can
+                                    contribute to real products: designing APIs, improving system reliability, and
+                                    working with engineers who value execution, clarity, and engineering discipline over
+                                    buzzwords.</p>
+
+                                <p>If your team builds real software and expects engineers to think independently and
+                                    take ownership, I’ll fit right in.</p>
+                            </div>
+
+                            <p class="mt-4"><i class="fa-solid fa-location-dot text-accent me-2"></i> Malappuram,
+                                Kerala, India - 676122</p>
+
+                            <div class="mt-4">
+                                <a href="#contact" class="btn btn-outline">Let's Talk</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="skills">
+
+        <section id="experience">
             <div class="content">
-                <h1><i class="fa-solid fa-computer"></i>Skills</h1>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="item">
-                                <div class="det">
-                                    <span>HTML</span>
-                                    <i>100%</i>
-                                </div>
-                                <div class="bar">
-                                    <div class="bar1" style="width: 100%;"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="det">
-                                    <span>CSS</span>
-                                    <i>90%</i>
-                                </div>
-                                <div class="bar">
-                                    <div class="bar1" style="width: 90%;"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="det">
-                                    <span>DJango</span>
-                                    <i>60%</i>
-                                </div>
-                                <div class="bar">
-                                    <div class="bar1" style="width: 60%;"></div>
+                    <div class="section-title">
+                        <h1>Experience</h1>
+                    </div>
+                    <div class="education-list">
+                        <!-- QubesAi.in -->
+                        <div class="education-item mb-4" data-tilt>
+                            <div class="edu-left">
+                                <h3>Software Engineer <span class="edu-badge">Full-time</span></h3>
+                                <div class="edu-institute">QubesAi.in</div>
+                                <p class="text-secondary mt-1 mb-2" style="font-size: 0.9rem;">Dec 2025 - Present •
+                                    On-site</p>
+                                <div class="mt-3" style="color: var(--text-secondary); font-size: 0.95rem;">
+                                    <p class="mb-2"><strong>AI & Automation Engineer</strong></p>
+                                    <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li>Built scalable web applications using <strong>n8n</strong> as the backend
+                                            orchestration layer.</li>
+                                        <li>Integrated <strong>LLM</strong> (Large Language Model) workflows for
+                                            intelligent automation.</li>
+                                        <li>Designed robust <strong>REST APIs</strong> and <strong>Webhooks</strong> to
+                                            connect disparate systems.</li>
+                                        <li>Streamlined business processes through custom automation pipelines.</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="item">
-                                <div class="det">
-                                    <span>Python</span>
-                                    <i>70%</i>
+
+                        <!-- Synnefo Solutions -->
+                        <div class="education-item" data-tilt>
+                            <div class="edu-left w-100">
+                                <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                    <div>
+                                        <h3>Full Stack Developer <span class="edu-badge">Internship</span></h3>
+                                        <div class="edu-institute">Synnefo Solutions</div>
+                                        <p class="text-secondary mt-1 mb-2" style="font-size: 0.9rem;">Jun 2024 - Feb
+                                            2025 • Kochi, Kerala</p>
+                                    </div>
                                 </div>
-                                <div class="bar">
-                                    <div class="bar1" style="width: 70%;"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="det">
-                                    <span>Bootstrap</span>
-                                    <i>70%</i>
-                                </div>
-                                <div class="bar">
-                                    <div class="bar1" style="width: 70%;"></div>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <div class="det">
-                                    <span>SQLite</span>
-                                    <i>90%</i>
-                                </div>
-                                <div class="bar">
-                                    <div class="bar1" style="width: 90%;"></div>
+                                <div class="mt-3" style="color: var(--text-secondary); font-size: 0.95rem;">
+                                    <p class="mb-2"><strong>Python Full Stack Developer</strong></p>
+                                    <ul style="list-style-type: disc; padding-left: 20px;">
+                                        <li>Developed and maintained web applications using Python (Django, Flask) for
+                                            the backend and React.js for the frontend.</li>
+                                        <li>Designed and implemented RESTful APIs, enhancing integration between
+                                            frontend and backend.</li>
+                                        <li>Collaborated with cross-functional teams to deliver high-quality software
+                                            solutions.</li>
+                                        <li>Leveraged SQL (PostgreSQL) and NoSQL (MongoDB) databases to optimize queries
+                                            and performance.</li>
+                                        <li>Optimized application speed and scalability, reducing load times by 25%.
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -159,121 +224,236 @@
                 </div>
             </div>
         </section>
+
         <section id="education">
             <div class="content">
-                <h1><i class="fa-solid fa-user-graduate"></i>Education</h1>
                 <div class="container">
-                    <div class="card">
-                        <!-- <img src="../static/images/python.jpg" class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h2 class="card-title">Diploma In Computer Engineering</h2>
-                            <h5 class="card-text">AKNM Govt. Polytechnic College Thirurangadi</h5>
-                            <h3>2021-2024</h3>
-                        </div>
+                    <div class="section-title">
+                        <h1>Education</h1>
                     </div>
-                    <div class="card">
-                        <!-- <img src="../static/images/python.jpg" class="card-img-top" alt="..."> -->
-                        <div class="card-body">
-                            <h2 class="card-title">Computer Science & Information Technology</h2>
-                            <h5 class="card-text">GVHSS Nellikuth</h5>
-                            <h3>2019-2021</h3>
+                    <div class="education-list">
+                        <div class="education-item" data-tilt>
+                            <div class="edu-left">
+                                <h3>Diploma In Computer Engineering <span class="edu-badge">Diploma</span></h3>
+                                <div class="edu-institute">AKNM Govt. Polytechnic College Thirurangadi</div>
+                            </div>
+                            <div class="edu-right">
+                                <div class="edu-years">2021 — 2024</div>
+                            </div>
+                        </div>
+
+                        <div class="education-item" data-tilt>
+                            <div class="edu-left">
+                                <h3>Computer Science &amp; IT <span class="edu-badge">VHSE</span></h3>
+                                <div class="edu-institute">GVHSS Nellikuth</div>
+                            </div>
+                            <div class="edu-right">
+                                <div class="edu-years">2019 — 2021</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="resume">
+
+        <section id="skills">
             <div class="content">
-                <h1>Resume</h1>
-                <div class="res">
-                    <iframe src="../static/images/RISHAD ROSHAN .pdf.pdf" frameborder="0"></iframe>
+                <div class="container">
+                    <div class="section-title">
+                        <h1>Skills & Tools</h1>
+                    </div>
+
+                    <!-- Backend & Core -->
+                    <div class="skill-category mb-5">
+                        <h4 class="mb-4 text-center text-accent"><i class="fa-solid fa-server me-2"></i>Backend & Core
+                        </h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">Flask</span>
+                            <span class="skill-tag">REST APIs</span>
+                            <span class="skill-tag">SQL</span>
+                            <span class="skill-tag">SQLite</span>
+                            <span class="skill-tag">C Language</span>
+                            <span class="skill-tag">Data Structures</span>
+                            <span class="skill-tag">OOP</span>
+                        </div>
+                    </div>
+
+                    <!-- Frontend -->
+                    <div class="skill-category mb-5">
+                        <h4 class="mb-4 text-center text-accent"><i class="fa-solid fa-code me-2"></i>Frontend</h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">JSON</span>
+                        </div>
+                    </div>
+
+                    <!-- Tools & Cloud -->
+                    <div class="skill-category">
+                        <h4 class="mb-4 text-center text-accent"><i class="fa-solid fa-cloud me-2"></i>Tools & Concepts
+                        </h4>
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Networking</span>
+                            <span class="skill-tag">AIML</span>
+                            <span class="skill-tag">Problem Solving</span>
+                            <span class="skill-tag">Payment Gateways</span>
+                            <span class="skill-tag">n8n</span>
+                            <span class="skill-tag">Webhooks</span>
+                            <span class="skill-tag">Automation</span>
+                            <span class="skill-tag">LLM Integration</span>
+                        </div>
+                    </div>
                 </div>
-                <a href="" class="btn btn1" download="RISHAD ROSHAN .pdf.pdf">DOWNLOAD</a>
             </div>
         </section>
+
         <section id="pro">
             <div class="content">
-                <h1>Projects</h1>
-                <div class="project-content">
-    
-                    <!-- E-commerce Website -->
-                    <div class="row">
-                        <img src="static/images/Screenshot 2025-01-28 152737.png" class="img">
-                        <div class="layer">
-                            <h5>Pawfect</h5>
-                            <h6 class="card-des">E-Commerce Website</h6>
-                            <p class="card-text">Created an e-commerce shop for pet supplies where admin can manage inventory and users can buy products </p>
-                            <div class="b">
-                                <a href="https://github.com/rishadroshanpt/pawfect" class="btn">See Code</a>
-                                <a href="https://pawfect.pythonanywhere.com" class="btn">Demo</a>
+                <div class="container">
+                    <div class="section-title">
+                        <h1>Featured Projects</h1>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-card" data-tilt>
+                            <img src="../static/images/waappa.png" alt="Waappa">
+                            <div class="project-body">
+                                <h5>Waappa - WhatsApp Automation</h5>
+                                <p>A powerful WhatsApp automation hub enabling <strong>bulk messaging</strong> to
+                                    thousands of groups without standard limitations. Features include advanced
+                                    <strong>message scheduling</strong> and mass distribution. Architected the entire
+                                    backend using <strong>n8n</strong> and <strong>Supabase</strong>.
+                                </p>
+                                <div class="actions">
+                                    <a class="btn btn-primary btn-sm" href="https://www.waappa.com" target="_blank">Live
+                                        Demo</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <img src="static/images/Screenshot 2025-01-28 145614.png"  class="img">
-                        <div class="layer">
-                            <h5>Bookmyshow</h5>
-                            <h6 class="card-des">Clone Website</h6>
-                            <p class="card-text">Cloned the website of bookmyshow to improve designing and to make responsive website. </p>
-                            <div class="b">
-                                <a href="https://github.com/rishadroshanpt/bookmyshow" class="btn">See Code</a>
-                                <a href="https://rishadroshanpt.github.io/bookmyshow/" class="btn">Demo</a>
+
+                        <div class="project-card" data-tilt>
+                            <img src="../static/images/pawfect.png" alt="Pawfect">
+                            <div class="project-body">
+                                <h5>Pawfect</h5>
+                                <p>E-commerce platform for pet supplies. Features include admin inventory management,
+                                    user authentication, and secure checkout flow.</p>
+                                <div class="actions">
+                                    <a class="btn btn-outline btn-sm" href="https://github.com/rishadroshanpt/pawfect"
+                                        target="_blank">Code</a>
+                                    <a class="btn btn-primary btn-sm" href="https://pawfect.pythonanywhere.com"
+                                        target="_blank">Live Demo</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <img src="static/images/Screenshot 2025-01-31 150612.png"  class="img">
-                        <div class="layer">
-                            <h5>Apple</h5>
-                            <h6 class="card-des">Clone Website</h6>
-                            <p class="card-text">Cloned the website of apple to improve designing and to make responsive website. </p>
-                            <div class="b">
-                                <a href="https://github.com/rishadroshanpt/apple_clone" class="btn">See Code</a>
-                                <a href="https://rishadroshanpt.github.io/apple_clone/" class="btn">Demo</a>
+
+                        <div class="project-card" data-tilt>
+                            <img src="../static/images/bookmyshow.png" alt="Bookmyshow">
+                            <div class="project-body">
+                                <h5>Bookmyshow Clone</h5>
+                                <p>A responsive clone of the BookMyShow movie ticketing platform, focusing on complex
+                                    layout replication and UI fidelity.</p>
+                                <div class="actions">
+                                    <a class="btn btn-outline btn-sm"
+                                        href="https://github.com/rishadroshanpt/bookmyshow" target="_blank">Code</a>
+                                    <a class="btn btn-primary btn-sm"
+                                        href="https://rishadroshanpt.github.io/bookmyshow/" target="_blank">Live
+                                        Demo</a>
+                                </div>
                             </div>
-                           
+                        </div>
+
+                        <div class="project-card" data-tilt>
+                            <img src="../static/images/apple.png" alt="Apple Clone">
+                            <div class="project-body">
+                                <h5>Apple Website Clone</h5>
+                                <p>Pixel-perfect clone of Apple's website. Demonstrates mastery of responsive design,
+                                    flexbox/grid, and modern CSS techniques.</p>
+                                <div class="actions">
+                                    <a class="btn btn-outline btn-sm"
+                                        href="https://github.com/rishadroshanpt/apple_clone" target="_blank">Code</a>
+                                    <a class="btn btn-primary btn-sm"
+                                        href="https://rishadroshanpt.github.io/apple_clone/" target="_blank">Live
+                                        Demo</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <section id="resume">
+            <div class="container text-center">
+                <div class="service-card d-inline-block">
+                    <h3>Want to know more?</h3>
+                    <p class="mb-4">Check out my detailed resume for a full history.</p>
+                    <a class="btn btn-primary" href="../static/images/Rishad_Roshan_Resume.pdf" download><i
+                            class="fa-solid fa-download me-2"></i> Download Resume</a>
+                </div>
+            </div>
+        </section>
+
         <section id="contact">
             <div class="content">
-                <h1><i class="fa-solid fa-headset"></i>Contact</h1>
                 <div class="container">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <img src="../static/images/contact-us.svg" alt="">
-                        </div>
-                        <div class="col-lg-6 contact-form">
+                    <div class="section-title">
+                        <h1>Get In Touch</h1>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 contact-form">
+                            {% with messages = get_flashed_messages(with_categories=true) %}
+                            {% if messages %}
+                            {% for category, message in messages %}
+                            <div class="alert alert-{{ category }} mb-4" role="alert"
+                                style="border-radius: var(--radius-sm); background: rgba(var(--accent-rgb), 0.1); color: var(--text-primary); border: 1px solid var(--accent);">
+                                {{ message }}
+                            </div>
+                            {% endfor %}
+                            {% endif %}
+                            {% endwith %}
                             <form action="{{ url_for('contact') }}" method="POST">
-                                <input type="name" placeholder="Your Name " name="name" required>
-                                <input type="email" placeholder="Your Email " name="email" required>
-                                <input type="number" placeholder="your Mobile Number" name="phone" required>
-                                <textarea name="message" id="" cols="35" rows="10" placeholder="How Can I Help You " required></textarea>
-                                <input type="submit" value="Send Message" class="submit" required>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="text" placeholder="Your Name" name="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" placeholder="Your Email" name="email" required>
+                                    </div>
+                                </div>
+                                <input type="number" placeholder="Your Phone Number" name="phone" required>
+                                <textarea name="message" cols="35" rows="6" placeholder="How can I help you?"
+                                    required></textarea>
+                                <button type="submit" class="submit">Send Message</button>
                             </form>
-                        </div>
-                        <div class="social">
-                            <a href="https://www.instagram.com/roshannn.n/?hl=en">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://github.com/rishadroshanpt">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                            <a href="mailto:rishadroshan27778@gmail.com">
-                                <i class="fa-solid fa-envelope"></i>
-                            </a>
-                            <a href="">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
+
+                            <div class="social text-center">
+                                <a href="https://www.instagram.com/roshannn.n/?hl=en" target="_blank"><i
+                                        class="fa-brands fa-instagram"></i></a>
+                                <a href="https://github.com/rishadroshanpt" target="_blank"><i
+                                        class="fa-brands fa-github"></i></a>
+                                <a href="mailto:rishadroshan27778@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://www.linkedin.com/in/rishad-roshan-pt" target="_blank"><i
+                                        class="fa-brands fa-linkedin"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
+
+        <footer class="text-center py-4" style="color: var(--text-secondary); font-size: 0.9rem;">
+            <p>&copy; 2024 Rishad Roshan. All rights reserved.</p>
+        </footer>
     </div>
+
     <script src="../static/js/script.js"></script>
 </body>
 

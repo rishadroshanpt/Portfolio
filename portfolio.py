@@ -6,10 +6,10 @@ app=Flask(__name__)
 app.config['MAIL_SERVER']='smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'rishadroshan27778@gmail.com'
-app.config['MAIL_PASSWORD'] = 'cwlw bisz aceb wsjj'
+app.config['MAIL_PASSWORD'] = 'atyz xhyo ujrg oshh'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
-app.config['MAIL_DEFAULT_SENDER'] = 'your_email@gmail.com'
+app.config['MAIL_DEFAULT_SENDER'] = 'rishadroshan27778@gmail.com'
 mail = Mail(app) 
 
 @app.route('/')
