@@ -13,7 +13,7 @@ export default function Navbar() {
             setIsScrolled(window.scrollY > 50);
         };
 
-        const savedTheme = (document.documentElement.getAttribute("data-theme") as "light" | "dark") || (localStorage.getItem("theme") as "light" | "dark") || "light";
+        const savedTheme = (localStorage.getItem("theme") as "light" | "dark") || "light";
         setTheme(savedTheme);
         document.documentElement.setAttribute("data-theme", savedTheme);
 
