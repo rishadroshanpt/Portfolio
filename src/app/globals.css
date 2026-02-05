@@ -623,6 +623,10 @@ section {
     color: var(--text-primary) !important;
 }
 
+[data-theme="dark"] .text-accent {
+    color: var(--accent) !important;
+}
+
 [data-theme="dark"] .btn-outline {
     color: var(--text-primary) !important;
     border-color: var(--surface-border) !important;

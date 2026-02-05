@@ -8,7 +8,7 @@ export default function About() {
                     </div>
                     <div className="row align-items-center justify-content-center">
                         <div className="col-lg-10 text-center">
-                            <h2>I&apos;m ROSHAN</h2>
+                            <h2>I&apos;m RISHAD <span className="text-accent" style={{ fontWeight: 800 }}>ROSHAN</span></h2>
                             <h4 className="text-accent mb-4">Software Engineer</h4>
                             <div
                                 className="text-start"

@@ -64,7 +64,9 @@ export default function Navbar() {
     return (
         <nav className={`navbar navbar-expand-sm fixed-top ${isScrolled || isMenuOpen ? "scrolled" : ""}`}>
             <div className="container">
-                <a className="navbar-brand" href="#" onClick={() => setIsMenuOpen(false)}>ROSHAN</a>
+                <a className="navbar-brand" href="#" onClick={() => setIsMenuOpen(false)}>
+                    <span className="text-accent" style={{ fontWeight: 800 }}>ROSHAN</span>
+                </a>
                 <button
                     className={`navbar-toggler ${isMenuOpen ? "open" : ""}`}
                     type="button"
