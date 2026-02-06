@@ -9,27 +9,34 @@ export default function Projects() {
             demo: "https://www.waappa.com",
         },
         {
+            title: "Taste Tribe",
+            description: "A community platform for foodies to share and discover recipes. Features a modern **Gourmet Dark** theme, **glassmorphism** navigation, and responsive design for a premium browsing experience.",
+            image: "/images/tastetribe.png",
+            code: "https://github.com/rishadroshanpt/taste-tribe",
+        },
+        {
+            title: "Expense Tracker",
+            description: "A comprehensive **full-stack** financial tool featuring secure **JWT authentication**, real-time data persistence with **Supabase**, and dynamic analytics using **Recharts**. Built for a seamless, mobile-responsive experience.",
+            image: "/images/expenseTracker.png",
+            code: "https://github.com/rishadroshanpt/expenseTracker",
+            demo: "https://roshans-expense-tracker.vercel.app/",
+        },
+        {
             title: "Pawfect",
             description: "E-commerce platform for pet supplies. Features include admin inventory management, user authentication, and secure checkout flow.",
             image: "/images/pawfect.png",
             code: "https://github.com/rishadroshanpt/pawfect",
-            demo: "https://pawfect.pythonanywhere.com",
-        },
-        {
-            title: "Bookmyshow Clone",
-            description: "A responsive clone of the BookMyShow movie ticketing platform, focusing on complex layout replication and UI fidelity.",
-            image: "/images/bookmyshow.png",
-            code: "https://github.com/rishadroshanpt/bookmyshow",
-            demo: "https://rishadroshanpt.github.io/bookmyshow/",
-        },
-        {
-            title: "Apple Website Clone",
-            description: "Pixel-perfect clone of Apple's website. Demonstrates mastery of responsive design, flexbox/grid, and modern CSS techniques.",
-            image: "/images/apple.png",
-            code: "https://github.com/rishadroshanpt/apple_clone",
-            demo: "https://rishadroshanpt.github.io/apple_clone/",
         },
     ];
+
+    const renderDescription = (text: string) => {
+        return text.split(/(\*\*.*?\*\*)/g).map((part, i) => {
+            if (part.startsWith('**') && part.endsWith('**')) {
+                return <strong key={i}>{part.slice(2, -2)}</strong>;
+            }
+            return part;
+        });
+    };
 
     return (
         <section id="pro">
@@ -52,12 +59,14 @@ export default function Projects() {
                                 </div>
                                 <div className="project-body">
                                     <h5>{project.title}</h5>
-                                    <p>{project.description}</p>
+                                    <p className="description">{renderDescription(project.description)}</p>
                                     <div className="actions">
                                         {project.code && (
                                             <a className="btn btn-outline btn-sm me-2" href={project.code} target="_blank">Code</a>
                                         )}
-                                        <a className="btn btn-primary btn-sm" href={project.demo} target="_blank">Live Demo</a>
+                                        {project.demo && (
+                                            <a className="btn btn-primary btn-sm" href={project.demo} target="_blank">Live Demo</a>
+                                        )}
                                     </div>
                                 </div>
                             </div>

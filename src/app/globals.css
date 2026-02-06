@@ -114,7 +114,8 @@ h5 {
     font-size: 1.25rem;
 }
 
-p {
+p,
+.description {
     color: var(--text-secondary);
 }
 

@@ -100,7 +100,7 @@ export default function Navbar() {
                                 className="theme-toggle-btn"
                                 aria-label="Toggle Theme"
                             >
-                                <i className={`fa-solid ${theme === "light" ? "fa-sun" : "fa-moon"}`}></i>
+                                <i className={`fa-solid ${theme === "light" ? "fa-moon" : "fa-sun"}`}></i>
                             </button>
                         </li>
                     </ul>
