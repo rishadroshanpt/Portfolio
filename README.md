@@ -165,7 +165,8 @@ npm run dev -- -p 3001
 
 ## 👥 Contributors
 
-**Rishad Roshan** – Developer & Maintainer
+**Rishad Roshan** – Developer & Maintainer  
+GitHub: [@rishadroshanpt](https://github.com/rishadroshanpt)
 
 ## 📄 License
 
